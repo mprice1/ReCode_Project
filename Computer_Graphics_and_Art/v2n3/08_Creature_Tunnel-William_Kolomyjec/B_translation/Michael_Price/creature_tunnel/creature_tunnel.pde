@@ -434,7 +434,7 @@ void transformToTunnelPoint() {
    // Persepective attentuation.
    float angle = atan2(dy, dx);
    rotate(angle);
-   scale(persp*persp*persp*2, persp);
+   scale(min(1.0,persp*persp*persp*2), min(1.0,persp));
    rotate(-angle);
    
    // Random rotation.
